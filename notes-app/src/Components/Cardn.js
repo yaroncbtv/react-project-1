@@ -20,7 +20,6 @@ class Cardn extends React.Component {
   
    render() { 
         
-    
         return ( 
         <div>
               <h2 style={{marginBottom:'15px',marginTop:'15px'}}>Your Notes</h2>
