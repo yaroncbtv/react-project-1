@@ -35,17 +35,14 @@ class Cardn extends React.Component {
                         return(
 <>                      
                         <Card style={{marginBottom:'20px'}} key={note.id}>
-                        <Card.Header style={{display:'flex', justifyContent:'space-between'}}><span>Create Date: {note.date}</span>
-                       
+                        <Card.Header style={{display:'flex', justifyContent:'space-between'}}><span>Create Date: <br/>{note.date}</span>
+                        <div>
+                        
                         <ModalPopUp popUpCard = {note}/>
-                        
-                        
-                        
-                        
-                        
                         
                         <Model2 removeNote = {() => this.removeNote(note.id)}/>
                        
+                        </div>
                         </Card.Header>
                         <Card.Body>
                         <Card.Title>{note.title}</Card.Title>

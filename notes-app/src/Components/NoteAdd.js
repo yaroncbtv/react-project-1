@@ -26,7 +26,7 @@ class NoteAdd extends React.Component {
             firebase.database().ref('notes').push({
                 titel: this.state.titel,
                 note:this.state.note,
-                date: new Date().toLocaleString()
+                date: new Date().toLocaleString("he-IL")
             })
         }
 

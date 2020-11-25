@@ -18,7 +18,7 @@ function ModalPopUp(props) {
       </Button>
         {handleShow}
       <Modal show={show} onHide={handleShow} animation={true}>
-        <Modal.Header closeButton onClick={handleClose}>
+        <Modal.Header style={{marginBottom:'10px'}} closeButton onClick={handleClose}>
           <Modal.Title> Your title: {props.popUpCard.title}</Modal.Title>
 
           </Modal.Header>
