@@ -7,14 +7,14 @@ function Modal2(props) {
   
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  console.log()
+  
   return (
     <>
       <Button variant="danger" onClick={handleShow}>
         Delete
       </Button>
         {handleShow}
-      <Modal show={show} onHide={handleShow} animation={false}>
+      <Modal show={show} onHide={handleShow} animation={true}>
         <Modal.Header closeButton onClick={handleClose}>
           <Modal.Title>Notes App Said</Modal.Title>
         </Modal.Header>

@@ -18,6 +18,8 @@ class NoteAdd extends React.Component {
         this.setState({
             [key]: event.target.value
         })
+
+        
     }
     createNote(){
         if(this.state.note !== '' && this.state.titel !== ''){
@@ -27,6 +29,12 @@ class NoteAdd extends React.Component {
                 date: new Date().toLocaleString()
             })
         }
+
+        this.setState({
+            titel: '',
+            note:'',
+            date:''
+        })
     }  
     render() {
         return (
