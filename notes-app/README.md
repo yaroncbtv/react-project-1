@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Y.C Notes React App
 
 - Link to my publish netlify notes react app: (https://ycnotes.netlify.app)
 - Entar to notes-app folder to see the code project.
