@@ -20,10 +20,27 @@ class Cardn extends React.Component {
   
    removeNote(id){
     firebase.database().ref('notes').child(id).remove()
+    
    }
    
+   handleCallback = (childData) =>{
+    this.setState({childData})
    
+    firebase.database().ref('notes').child(childData.id).set({
+        titel: childData.title,
+        note: childData.note,
+        date: childData.date
+      }, (error) => {
+        if (error) {
+          // The write failed...
+        } else {
+            
+            // console.log('Data saved successfully!')
+        }
+      });
+}
 
+   
 
    render() { 
        
@@ -38,8 +55,8 @@ class Cardn extends React.Component {
                         <Card.Header style={{display:'flex', justifyContent:'space-between'}}><span>Create Date: <br/>{note.date}</span>
                         <div>
                         
-                        <ModalPopUp popUpCard = {note}/>
-                        
+                        <ModalPopUp popUpCard = {note} parentCallback = {this.handleCallback}/>
+                        {/* <ModalPopUp popUpCard = {note}/> */}
                         <Model2 removeNote = {() => this.removeNote(note.id)}/>
                        
                         </div>

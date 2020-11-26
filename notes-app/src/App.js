@@ -48,6 +48,41 @@ class App extends React.Component {
         notes: notes
       });
     });
+
+    this.db.ref('notes').on('child_changed', snapshot =>{
+      const title1 =  snapshot.child("titel").val();
+      const note1 =  snapshot.child("note").val();
+      
+      let notes = this.state.notes;
+      let notesUpdate = this.state.notes;
+      notesUpdate.map(note => {
+        if(note.id === snapshot.key){
+            note.title = title1
+            note.note = note1
+            note.date = new Date().toLocaleString("he-IL")
+        }
+        
+    console.log(notesUpdate)
+    })
+
+
+
+      
+    //   let notes = this.state.notes;
+    //   notes = notes.map(note => {
+    //     console.log(note.id + snapshot.key)
+    //     if(note.id === snapshot.key){
+          
+    //   }
+    
+    // })
+
+    
+    });
+
+    
+
+
   }
   render(){
     
