@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+- Link to my publish netlify notes react app: (https://ycnotes.netlify.app)
+- Entar to notes-app folder to see the code project.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
