@@ -22,7 +22,7 @@ class NoteAdd extends React.Component {
         
     }
     createNote(){
-        if(this.state.note !== '' && this.state.titel !== ''){
+        if(this.state.note !== '' || this.state.titel !== ''){
             firebase.database().ref('notes').push({
                 titel: this.state.titel,
                 note:this.state.note,
