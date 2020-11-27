@@ -59,29 +59,10 @@ class App extends React.Component {
         if(note.id === snapshot.key){
             note.title = title1
             note.note = note1
-            note.date = new Date().toLocaleString("he-IL")
+            note.date = new Date().toLocaleString("he-IL") + ' (Update)'
         }
-        
-    console.log(notesUpdate)
     })
-
-
-
-      
-    //   let notes = this.state.notes;
-    //   notes = notes.map(note => {
-    //     console.log(note.id + snapshot.key)
-    //     if(note.id === snapshot.key){
-          
-    //   }
-    
-    // })
-
-    
     });
-
-    
-
 
   }
   render(){
@@ -95,19 +76,12 @@ class App extends React.Component {
               <NoteAdd/>
             </Col>
           </Row>
-          
           <Row >
             <Col>
             <Cardn notes={this.state.notes}/>
             </Col>
           </Row>
-          
-  
         </Container>
-  
-  
-  
-  
       </div>
     );
   }

@@ -1,7 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import React, { useState } from 'react';
-import InputGroup from 'react-bootstrap/InputGroup';
+import React from 'react';
+
 
 import Form from 'react-bootstrap/Form';
 
@@ -18,15 +18,9 @@ class ModalPopUp extends React.Component{
         }
     }
 
-
-//     const [show, setShow] = useState(false);
-    
     handleClose = () => this.setState({setShow: false})
     handleShow = () => this.setState({setShow: true})
  
-    
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
 handleChange (event, key){
     this.setState({
         [key]: event.target.value
@@ -65,7 +59,6 @@ onTrigger = (event) => {
                     </Modal.Body>
                 <Form>
                 <Form.Group controlId="exampleForm.ControlTextarea1">
-                {/* <Form.Label>Change note:</Form.Label> */}
                 <Form.Control 
                 onChange={(event) => this.handleChange(event, 'note')} 
                 placeholder="Change note" as="textarea" rows={3} />
@@ -77,7 +70,6 @@ onTrigger = (event) => {
                   Cancel
                   </Button>
                   <Button variant="warning"  onClick = {this.onTrigger}> 
-                  {/* onClick={this.handleClose} */}
                   Change
                   </Button>
                 </Modal.Footer>

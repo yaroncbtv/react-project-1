@@ -4,16 +4,16 @@ import React, { useState } from 'react';
 
 function Modal2(props) {
   const [show, setShow] = useState(false);
-  
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  
+
   return (
     <>
       <Button variant="danger" onClick={handleShow}>
         Delete
       </Button>
-        {handleShow}
+      {handleShow}
       <Modal show={show} onHide={handleShow} animation={true}>
         <Modal.Header closeButton onClick={handleClose}>
           <Modal.Title>Notes App Said</Modal.Title>
@@ -30,6 +30,6 @@ function Modal2(props) {
       </Modal>
     </>
   );
-  }
+}
 
-  export default Modal2;
+export default Modal2;

@@ -32,16 +32,13 @@ class Cardn extends React.Component {
         date: childData.date
       }, (error) => {
         if (error) {
-          // The write failed...
+            console.log('The write failed..');
         } else {
             
-            // console.log('Data saved successfully!')
+            console.log('Data saved successfully!');
         }
       });
 }
-
-   
-
    render() { 
        
         return ( 
@@ -52,11 +49,10 @@ class Cardn extends React.Component {
                         return(
 <>                      
                         <Card style={{marginBottom:'20px'}} key={note.id}>
-                        <Card.Header style={{display:'flex', justifyContent:'space-between'}}><span>Create Date: <br/>{note.date}</span>
+                        <Card.Header style={{display:'flex', justifyContent:'space-between'}}><div style={{width:'160px'}}>Create Date: <br/>{note.date} </div>
                         <div>
                         
                         <ModalPopUp popUpCard = {note} parentCallback = {this.handleCallback}/>
-                        {/* <ModalPopUp popUpCard = {note}/> */}
                         <Model2 removeNote = {() => this.removeNote(note.id)}/>
                        
                         </div>
