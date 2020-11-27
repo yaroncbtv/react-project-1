@@ -13,8 +13,8 @@ class ModalPopUp extends React.Component{
             setShow: false,
             date: new Date().toLocaleString("he-IL"),
             id: this.props.popUpCard.id,
-            note: '',
-            title: ''
+            note: this.props.popUpCard.note,
+            title: this.props.popUpCard.title
         }
     }
 
@@ -28,6 +28,14 @@ handleChange (event, key){
     
 }
 onTrigger = (event) => {
+    
+    if(this.state.note === ''){
+      this.setState({note: this.props.popUpCard.note})
+    }
+    if(this.state.title === ''){
+      this.setState({title: this.props.popUpCard.title})
+    }
+    
     this.props.parentCallback(this.state);
     this.handleClose()
     event.preventDefault();

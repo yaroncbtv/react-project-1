@@ -57,9 +57,9 @@ class App extends React.Component {
       let notesUpdate = this.state.notes;
       notesUpdate.map(note => {
         if(note.id === snapshot.key){
-            note.title = title1
-            note.note = note1
-            note.date = new Date().toLocaleString("he-IL") + ' (Update)'
+              note.title = title1
+              note.note = note1
+              note.date = new Date().toLocaleString("he-IL") + ' (Update)'
         }
     })
     });

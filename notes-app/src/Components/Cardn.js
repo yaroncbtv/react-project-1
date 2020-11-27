@@ -30,6 +30,7 @@ class Cardn extends React.Component {
         titel: childData.title,
         note: childData.note,
         date: childData.date
+
       }, (error) => {
         if (error) {
             console.log('The write failed..');
